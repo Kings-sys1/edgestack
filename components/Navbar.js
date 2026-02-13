@@ -15,9 +15,9 @@ export function Navbar () {
                 <h1 className="text-3xl font-bold text-blue-500">Edgestack</h1>
                 <ul className="hidden md:flex text-sm gap-5">
                     <Link href="/"><li>Home</li></Link>
-                    <li>Enroll</li>
+                    <Link href="/dashboard/enroll"><li>Enroll</li></Link>
                     <li>Student-list</li>
-                    <li>Profile</li>
+                    <Link href="/dashboard/profile"><li>Profile</li></Link>
                 </ul>
                 <Link href="/auth/login">
                     <div className="hidden md:w-20 md:h-10 md:rounded md:shadow md:text-white md:bg-blue-500 md:flex md:justify-center items-center">
