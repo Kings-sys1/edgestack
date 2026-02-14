@@ -16,7 +16,7 @@ export function Navbar () {
                 <ul className="hidden md:flex text-sm gap-5">
                     <Link href="/"><li>Home</li></Link>
                     <Link href="/dashboard/enroll"><li>Enroll</li></Link>
-                    <li>Student-list</li>
+                    <Link href="/dashboard/student-list"><li>Student-list</li></Link>
                     <Link href="/dashboard/profile"><li>Profile</li></Link>
                 </ul>
                 <Link href="/auth/login">
@@ -32,9 +32,9 @@ export function Navbar () {
             <div className="flex flex-col gap-2 justify-center items-center">
                 <ul className="flex flex-col text-sm gap-5 font-semibold md:hidden">
                     <Link href="/"><li>Home</li></Link>
-                    <li>Enroll</li>
-                    <li>Student-list</li>
-                    <li>Profile</li>
+                    <Link href="/dashboard/enroll"><li>Enroll</li></Link>
+                    <Link href="/dashboard/student-list"><li>Student-list</li></Link>
+                    <Link href="/dashboard/profile"><li>Profile</li></Link>
                 </ul>
                 <Link href="/auth/login">
                     <div className="w-20 md:h-10 rounded shadow text-white bg-blue-500 flex justify-center items-center md:hidden">

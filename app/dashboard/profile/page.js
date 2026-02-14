@@ -1,16 +1,23 @@
-import { auth } from "@/auth";
+import { auth, signOut } from "@/auth";
 import Image from "next/image";
+import { redirect } from "next/navigation";
+import { LuLogOut } from "react-icons/lu";
+import { CgProfile } from "react-icons/cg";
+
 
 export default async function Profile () {
     const session = await auth();
-    console.log(session);
+    if(!session){
+        redirect("/auth/login");
+    }
+
     return (
-        <main className="min-h-screen flex justify-center py-6 px-2">
-            <div className="w-full md:w-90 max-h-110 rounded shadow-md py-5 px-4">
+        <main className="min-h-screen flex justify-center py-10 px-2">
+            <div className="w-full md:w-90 max-h-120 rounded shadow-md py-10 px-4">
                 <h1 className="text-center font-semibold text-xl">Profile Details</h1>
                 <div className="mt-2 flex justify-center">
                     <Image
-                    src="/womanstudying.jpg"
+                    src={session.user?.image || <CgProfile />}
                     alt="profile-image"
                     width={80}
                     height={80}
@@ -39,6 +46,18 @@ export default async function Profile () {
                         <p className="text-gray-600 text-xs">Male</p>
                     </div>
                 </div>
+
+                <form 
+                action={async () =>{
+                    "use server"
+                    await signOut();
+                }}
+                className="mt-5">
+                    <button className="flex justify-center items-center w-30 h-10 bg-red-500 text-white rounded shadow cursor-pointer">
+                        <LuLogOut />
+                        <span className="ml-1">Logout</span>
+                    </button>
+                </form>
             </div>
         </main>
     )

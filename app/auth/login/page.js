@@ -1,11 +1,14 @@
 import { auth, signIn } from "@/auth";
 import { TextField } from "@mui/material";
+import { redirect } from "next/navigation";
 import { FcGoogle } from "react-icons/fc";
 import { IoLogoGithub } from "react-icons/io";
 
 export default async function Login () {
     const session = await auth();
-    console.log(session);
+    if(session) {
+        redirect("/dashboard/enroll");
+    }
     
     return (
         <main className="min-h-screen flex justify-center py-6 px-2">
