@@ -1,6 +1,6 @@
  "use client"
 import { db } from "@/config/firebase.config";
-import { Button, Card, CardContent, CardHeader, Checkbox, Dialog, DialogActions, DialogContent, DialogTitle, FormControl, FormControlLabel, FormGroup, InputLabel, MenuItem, Select, TextField } from "@mui/material";
+import { Button, Card, CardContent, CardHeader, Checkbox, Dialog, DialogActions, DialogContent, DialogTitle, FormControl, FormControlLabel, FormGroup, InputLabel, MenuItem, Select, TextField, Typography } from "@mui/material";
 import { addDoc, collection } from "firebase/firestore";
 import { useFormik } from "formik";
 import { useSession } from "next-auth/react";
@@ -18,8 +18,10 @@ const schema = yup.object().shape({
  
 export default function Enroll () {
     const [loading, setLoading] = useState(false);
-    const [open, setOpen] = useState();
+    const [open, setOpen] = useState(false);
     const {data : session} = useSession();
+    
+    const handleClose = ()=> setOpen(false) 
      const {handleChange, handleSubmit,touched,errors,values,setFieldValue } = useFormik({
         initialValues: {
             fullName: "",
@@ -29,26 +31,26 @@ export default function Enroll () {
             subject: [],
         },
         onSubmit: async(values, {resetForm})=>{
-            try {
-                setLoading(true);
-                await addDoc(collection(db, "enrollments"),{
+              try {
+                   setLoading(true);
+                  await addDoc(collection(db,"enrollments"),{
                     user: session?.user?.id,
                     fullName: values.fullName,
                     phoneNumber: values.phone,
                     examType: values.examType,
                     examDate: values.examDate,
                     selectedSubjects: values.subject,
-                    timeCreated: new Date(),
-                })
-                alert("Student enrolled successfully");
-                resetForm();
-                setLoading(false);
-            }
-            catch(error) {
+                    timecreated: new Date(), 
+                  })
+                  setOpen(true)
+                  resetForm();
+                  setLoading(false);
+              }
+              catch(error) {
                 console.error("Error submitting form:", error);
-                alert("Failed to enroll student. please try agin.");
+                alert("Failed to enroll student. Please try again.");
                 setLoading(false);
-            }
+              }
         }, 
         validationSchema: schema,
 
@@ -148,6 +150,16 @@ export default function Enroll () {
                        </form>
                  </CardContent>
             </Card>
+
+            <Dialog open={open} onClose={handleClose} >
+                <DialogTitle>Success</DialogTitle>
+                <DialogContent>
+                    <Typography>Student enrolled succesfully</Typography>
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={handleClose} variant="contained" color="primary">Close</Button>
+                </DialogActions>
+            </Dialog>
         </main>
     )
 }
