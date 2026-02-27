@@ -41,32 +41,32 @@ export default function HomePage() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 px-5 lg:px-10 py-5">
-        <div className="h-65 w-85 md:w-90 p-5 border border-gray-200 rounded-3xl shadow-lg bg-white">
+        <div className="h-65 md:w-90 p-5 border border-gray-200 rounded-3xl shadow-lg bg-white">
           <p className="text-5xl text-blue-400 mt-3"><MdSecurity /></p>
           <p className="font-bold text-lg mt-4">Enterprise Security</p>
           <p className="mt-3 text-gray-600">Bank-grade encryption, anti-cheating measures, and secure browser lockdown ensure exam integrity.</p>
         </div>
-        <div className="h-65 w-85 md:w-90 p-5 border border-gray-200 rounded-3xl shadow-lg bg-white">
+        <div className="h-65 md:w-90 p-5 border border-gray-200 rounded-3xl shadow-lg bg-white">
           <p className="text-5xl text-blue-400 mt-3"><AiOutlineRise /></p>
           <p className="font-bold text-lg mt-4">Unlimited Scalability</p>
           <p className="mt-3 text-gray-600">From 10 to 100,000 concurrent users. Our cloud infrastructure scales with your needs.</p>
         </div>
-        <div className="h-65 w-85 md:w-90 p-5 border border-gray-200 rounded-3xl shadow-lg bg-white">
+        <div className="h-65 md:w-90 p-5 border border-gray-200 rounded-3xl shadow-lg bg-white">
           <p className="text-5xl text-blue-400 mt-3"><IoFilter /></p>
           <p className="font-bold text-lg mt-4">Complete Flexibility</p>
           <p className="mt-3 text-gray-600">Custom question types, adaptive testing, randomization, and configurable exam rules.</p>
         </div>
-        <div className="h-65 w-85 md:w-90 p-5 border border-gray-200 rounded-3xl shadow-lg bg-white">
+        <div className="h-65 md:w-90 p-5 border border-gray-200 rounded-3xl shadow-lg bg-white">
           <p className="text-5xl text-blue-400 mt-3"><FaChartColumn /></p>
           <p className="font-bold text-lg mt-4">Advanced Analytics</p>
           <p className="mt-3 text-gray-600">Real-time insights, performance reports, item analysis, and comprehensive dashboards.</p>
         </div>
-        <div className="h-65 w-85 md:w-90 p-5 border border-gray-200 rounded-3xl shadow-lg bg-white">
+        <div className="h-65 md:w-90 p-5 border border-gray-200 rounded-3xl shadow-lg bg-white">
           <p className="text-5xl text-blue-400 mt-3"><MdOutlineWifiProtectedSetup /></p>
           <p className="font-bold text-lg mt-4">Quick Setup</p>
           <p className="mt-3 text-gray-600">Get started in minutes. Import questions, create exams, and invite candidates effortlessly.</p>
         </div>
-        <div className="h-65 w-85 md:w-90 p-5 border border-gray-200 rounded-3xl shadow-lg bg-white">
+        <div className="h-65 md:w-90 p-5 border border-gray-200 rounded-3xl shadow-lg bg-white">
           <p className="text-5xl text-blue-400 mt-3"><MdOutlineSupportAgent /></p>
           <p className="font-bold text-lg mt-4">Expert Support</p>
           <p className="mt-3 text-gray-600">Dedicated account managers and 24/7 technical support to ensure smooth exam delivery.</p>
@@ -161,7 +161,7 @@ export default function HomePage() {
         <p className="text-lg text-gray-500 mt-5 px-10 md:px-20 lg:px-70">See what academic administrators and HR professionals say about Edgstack.</p>
       </div>
       <div className="px-5 lg:px-10 mt-5 grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-8">
-        <div className="p-4 lg:p-8 h-60 lg:h-55 w-85 lg:w-140 border rounded-b-lg shadow-lg bg-white">
+        <div className="p-4 lg:p-8 h-60 lg:h-55 lg:w-140 border rounded-b-lg shadow-lg bg-white">
           <p>"Edgstack transformed how we conduct examinations. The security features and scalability are unmatched. We've successfully administered over 50,000 exams without a single incident."</p>
           <div className="flex gap-2 items-center mt-4">
             <div className="bg-sky-700 h-12 w-12 text-lg flex justify-center items-center rounded-full">SM</div>
@@ -172,7 +172,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div className="p-4 lg:p-8 h-60 lg:h-55 w-85 lg:w-140 border rounded-b-lg shadow-lg bg-white">
+        <div className="p-4 lg:p-8 h-60 lg:h-55 lg:w-140 border rounded-b-lg shadow-lg bg-white">
           <p>"As an HR director managing employee certifications, Edgstack has been a game-changer. The analytics dashboard provides insights we never had before, and the support team is exceptional."</p>
           <div className="flex gap-2 items-center mt-4">
             <div className="bg-sky-700 h-12 w-12 text-lg flex justify-center items-center rounded-full">MC</div>
@@ -183,7 +183,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div className="p-3 lg:p-8 h-60 lg:h-55 w-85 lg:w-140 border rounded-b-lg shadow-lg bg-white">
+        <div className="p-3 lg:p-8 h-60 lg:h-55 lg:w-140 border rounded-b-lg shadow-lg bg-white">
           <p>"We needed a platform that could handle thousands of concurrent users during peak exam periods. Edgstack delivered flawlessly. The setup was quick, and the interface is intuitive for both staff and students."</p>
           <div className="flex gap-2 items-center mt-4">
             <div className="bg-sky-700 h-12 w-12 text-lg flex justify-center items-center rounded-full">AP</div>
@@ -194,7 +194,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div className="p-4 lg:p-8 h-60 lg:h-55 w-85 lg:w-140 border rounded-b-lg shadow-lg bg-white">
+        <div className="p-4 lg:p-8 h-60 lg:h-55 lg:w-140 border rounded-b-lg shadow-lg bg-white">
           <p>"The flexibility to customize exams and the anti-cheating measures give us complete confidence in assessment integrity. Edgstack has become an essential part of our training infrastructure."</p>
           <div className="flex gap-2 items-center mt-4">
             <div className="bg-sky-700 h-12 w-12 text-lg flex justify-center items-center rounded-full">SM</div>

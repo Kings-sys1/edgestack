@@ -20,7 +20,7 @@ export default function Enroll () {
     const [loading, setLoading] = useState(false);
     const [open, setOpen] = useState(false);
     const {data : session} = useSession();
-    
+
     const handleClose = ()=> setOpen(false) 
      const {handleChange, handleSubmit,touched,errors,values,setFieldValue } = useFormik({
         initialValues: {
@@ -140,8 +140,7 @@ export default function Enroll () {
                                onChange={()=>handleSubjectChange(subj)}/>} 
                               label={subj} 
                               />
-                              
-                             )}
+                              )}
                              {touched.subject && errors.subject ? <span className="text-red-500 text-xs">{errors.subject}</span> : null}
                           </FormGroup>
                           <button type="submit" className="w-full h-9 cursor-pointer rounded bg-blue-500 font-semibold text-white">

@@ -94,9 +94,9 @@ export default function Student() {
                     <p className="text-gray-800 text-lg">Exam Date</p>
                     <p className="text-gray-600 text-sm mt-2">{student?.examDate}</p>
                  </div>
-                 <div className="flex justify-between">
+                 <div className="flex gap-10 justify-between">
                     <p className="text-gray-800 text-lg">Subjects</p>
-                    <p className="text-gray-600 text-sm mt-2">{student?.selectedSubjects.join(" ,")}</p>
+                    <p className="text-gray-600 text-sm">{student?.selectedSubjects.join(", ")}</p>
                  </div>
               </div>
               <div className="mt-10 flex justify-end">
